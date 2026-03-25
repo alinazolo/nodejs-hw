@@ -14,7 +14,7 @@ import { celebrate } from 'celebrate';
 
 
 const router = Router();
-router.get('/notes?page=1&perPage=10', celebrate(getAllNotesSchema), getAllNotes);
+router.get('/notes', celebrate(getAllNotesSchema), getAllNotes);
 router.get('/notes/:noteId', celebrate(noteIdSchema), getNoteById);
 router.post('/notes', celebrate(createNoteSchema), createNote);
 router.delete("/notes/:noteId", celebrate(noteIdSchema), deleteNote);
