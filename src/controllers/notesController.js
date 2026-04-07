@@ -9,8 +9,8 @@ export const getAllNotes = async (req, res) => {
 
   const notesQuery = Note.find({userId: req.user._id});
   if (req.query.search) {
-    notesQuery.where("$text").equals({
-      $search: req.query.search
+    notesQuery.where({
+      $text: { $search: req.query.search }
     });
   }
 
