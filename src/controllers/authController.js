@@ -126,7 +126,7 @@ export const requestResetEmail = async (req, res, next) => {
   });
 };
 
-export const resetPasword = async (req, res) => {
+export const resetPassword = async (req, res) => {
   const { token, password } = req.body;
 
   let playload;
